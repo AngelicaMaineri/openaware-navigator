@@ -6,4 +6,4 @@ The OpenAware Navigator was created during the Open Science Retreat Netherlands 
 
 Please note that the Navigator has been developed in the Netherlands, and most of the resources listed are mainly available to Dutch-affiliated researchers. If you are interested in adapting this work to your own context, you are welcome to use this a template.
 
-To access the survey, please visit https://jack-fitzgerald.shinyapps.io/OpenAware_Navigator/
+To access the tool, please visit https://jack-fitzgerald.shinyapps.io/OpenAware_Navigator/
