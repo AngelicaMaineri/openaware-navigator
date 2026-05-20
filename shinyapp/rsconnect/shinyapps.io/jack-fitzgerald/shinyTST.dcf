@@ -1,0 +1,12 @@
+name: shinyTST
+title: shinyapp
+username: jack-fitzgerald
+account: jack-fitzgerald
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13236471
+bundleId: 10037425
+url: https://jack-fitzgerald.shinyapps.io/shinyTST/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

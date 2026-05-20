@@ -1,0 +1,331 @@
+---
+# The YAML header specifies several settings for the survey but is not required.
+# A full list of settings can be found under _survey/settings.yml directory.
+
+theme-settings:
+  theme: default
+  barposition: top
+  footer-left: "Made with [surveydown](https://surveydown.org)"
+  footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/surveydown-dev/template_conditional_showing)'
+
+survey-settings:
+  show-previous: false
+  use-cookies: false
+  auto-scroll: false
+  rate-survey: false
+  system-language: en
+  highlight-unanswered: true
+  highlight-color: blue
+  capture-metadata: true
+  all-required: false
+---
+
+```{r}
+library(surveydown)
+```
+
+--- welcome
+
+# Transparency Guidelines for Restricted Data
+
+Welcome to the web form for determining necessary reporting standards for your restricted data project. Your responses in this form will not be saved.
+
+::: {.callout-tip}
+The RDA Sensitive Data Interest Group provides the following working definition of `sensitive data': “Data is information, observations, measurements or some other form of documentation about a place, person, event, animal or phenomenon. It may be digital or non-digital. Sensitive data is Information that may be regulated by law due to possible risk for plants, animals, individuals and/or communities and for public and private organisations. Sensitive personal data as a specific subset of sensitive data include information related to racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership and data concerning the health or sex life of an identifiable (or potentially identifiable) individual. All sensitive data are data that could potentially cause harm through their disclosure. For local and government authorities, sensitive data is related to security (political, diplomatic, military data, biohazard concerns, etc.), environmental risks (nuclear or other sensitive installations, for example) or environmental preservation (habitats, protected fauna or flora, in particular). Sensitive data may also be subject to stipulations of customary or communal law of First Nations Peoples, and may be subject to the guidance of communities, traditional leaders, and CARE authority. The sensitive data of a private body concerns particular strategic elements or elements likely to jeopardise its competitiveness.”
+
+David et al., 2020. “Templates for FAIRness evaluation criteria – RDA-SHARC IG.” https://zenodo.org/record/3922069#.YCJU7ehKg2w.
+:::
+  
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'sensitive_data_q',
+  label = "Does your project use sensitive data?",
+  option = c(
+    'Yes'    = 'yes',
+    'No' = 'no'
+  )
+)
+```
+
+--- no_sensitive_data
+
+# No Sensitive Data
+
+Talk to a data steward. To find a data steward, please see contact information on your local Digital Competence Center or University Library. If your institution does not have a Digital Competence Center, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the Awesome RDM Support list for contacts (https://github.com/AngelicaMaineri/awesome-RDM-support/).
+
+You may now exit the tool.
+
+
+```{r}
+sd_close()
+```
+
+--- yes_sensitive_data
+
+# Control Over Data
+
+::: {.callout-tip}
+If you are producing the data yourself, you have control of the data. If another legal entity produced the data, you probably do not have full control of the data. If you are combining data from different sources, please select “Yes” and answer the rest of this flowchart from the perspective of the data that you have control over; then later, for the part of your sources you do not have control over, follow the steps for “No”.
+
+:::
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'control_over_data_q',
+  label = "Do you have control over the data?",
+  option = c(
+    'Yes'    = 'yes',
+    'No' = 'no',
+    'Unsure'    = 'unsure'
+  )
+)
+```
+
+--- no_control_over_data
+
+# No Control Over Data
+
+Contact the data controller to collect as much information as possible about the data (including the DOI of the metadata). Cite the metadata in your publication(s). Add a clear description of how to access the data in your publication. Be sure to publish other assets related to the data rather than the data itself (e.g., code, analytical scripts, interview guides, questionnaires, codebooks, research design materials, transcribing conventions, and data production protocols).
+
+You may now exit the tool.
+
+```{r}
+sd_close()
+```
+
+--- unsure_control_over_data
+
+# Uncertain About Control Over Data
+
+Talk to a data steward. To find a data steward, please see contact information on your local Digital Competence Center or University Library. If your institution does not have a Digital Competence Center, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the Awesome RDM Support list for contacts (https://github.com/AngelicaMaineri/awesome-RDM-support/).
+
+You may now exit the tool.
+
+```{r}
+sd_close()
+```
+
+--- yes_control_over_data
+
+# Data Steward Contact
+
+::: {.callout-tip}
+Subjects to discuss with your data steward include storage options, security thresholds, institutional standards, and necessary certifications.
+:::
+  
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'contacted_data_steward_q',
+  label = "Have you contacted your institution's data steward about your project?",
+  option = c(
+    'Yes' = 'yes',
+    'No' = 'no'
+  )
+)
+```
+
+--- no_contacted_data_steward
+
+# Data Steward Not Contacted
+
+Talk to a data steward. To find a data steward, please see contact information on your local Digital Competence Center or University Library. If your institution does not have a Digital Competence Center, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the Awesome RDM Support list for contacts (https://github.com/AngelicaMaineri/awesome-RDM-support/).
+
+You may now continue using the tool.
+
+--- informed_consent
+
+# Informed Consent
+
+::: {.callout-tip}
+When we say `informed consent`, we mean...
+:::
+  
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'informed_consent_q',
+  label = "Does your project make use of informed consent?",
+  option = c(
+    'Yes'    = 'yes',
+    'No' = 'no'
+  )
+)
+```
+
+--- no_informed_consent
+
+# No Informed Consent
+
+Here are options and best practices when the project does not involve informed consent....
+1. x
+2. y
+3. z
+
+```{r}
+sd_close()
+```
+
+--- yes_informed_consent
+
+# Informed Consent and Data Sharing
+  
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'informed_consent_data_sharing_q',
+  label = "Does your informed consent inform subjects that data may be shared or published?",
+  option = c(
+    'Yes'    = 'yes',
+    'No' = 'no'
+  )
+)
+```
+
+--- no_informed_consent_data_sharing
+
+# No Informed Consent for Data Sharing
+
+Be sure to publish other assets related to the data rather than the data itself (e.g., code, analytical scripts, interview guides, questionnaires, codebooks, research design materials, transcribing conventions, and data production protocols).
+
+```{r}
+sd_close()
+```
+
+--- yes_informed_consent_data_sharing
+
+# Non-Anonymous Data Sharing
+
+::: {.callout-tip}
+Under GDPR, non-anonymous data includes...
+
+By `restrictions`, we mean...
+
+Examples where informed consent can allow for partial non-anonymous data sharing include...
+:::
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'non_anonymous_q',
+  label = "Does your informed consent allow for the sharing of non-anonymous data?",
+  option = c(
+    'Yes, openly'    = 'yes_openly',
+    'Yes, with restrictions'    = 'yes_with_restrictions',
+    'Partially'    = 'partially',
+    'No' = 'no'
+  )
+)
+```
+
+--- yes_openly_non_anonymous
+
+# Informed Consent for Openly Sharing Non-Anonymous Data
+
+Deposit your data with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations, 4TU.ResearchData, or your institution’s DataverseNL. Specify a license for the data (the repository usually defines which licenses are possible).
+
+You may now exit the tool.
+
+```{r}
+sd_close()
+```
+
+--- yes_with_restrictions_non_anonymous
+
+# Informed Consent for Sharing Non-Anonymous Data with Restrictions
+
+Deposit your data with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms.
+
+You may now exit the tool.
+
+```{r}
+sd_close()
+```
+
+--- partially_non_anonymous
+
+# Informed Consent for Partially Sharing Non-Anonymous Data
+
+Deposit the parts of your data you can share with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms.
+
+You may now exit the tool.
+
+```{r}
+sd_close()
+```
+
+--- no_non_anonymous
+
+# Anonymity
+
+::: {.callout-tip}
+By `anonymized`, we mean...
+:::
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'anonymity_q',
+  label = "Is your data anonymized?",
+  option = c(
+    'Yes'    = 'yes',
+    'No' = 'no'
+  )
+)
+```
+
+--- yes_anonymity
+
+# Informed Consent for Partially Sharing Non-Anonymous Data
+
+Given that you have anonymized data...
+
+```{r}
+sd_close()
+```
+
+--- no_anonymity
+
+# Capacity to Anonymize
+
+::: {.callout-tip}
+Most data can be anonymized, that is: direct identifiers (e.g., names, addresses) and indirect identifiers (e.g., combination of information like age, occupation and postcode) are removed from the data. See more info about anonymization in the CESSDA Data Management Expert Guide (https://dmeg.cessda.eu/Data-Management-Expert-Guide/5.-Protect/Anonymisation). For some data types it does not make sense to anonymize, as the resulting data will become useless. This for example holds for longer video interviews of patient journeys. Those types of data cannot be anonymized.
+:::
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'can_anonymize_q',
+  label = "Can your data be anonymized?",
+  option = c(
+    'Yes'    = 'yes',
+    'No' = 'no'
+  )
+)
+```
+
+--- yes_can_anonymize
+
+# Informed Consent to Share Data that Can Be Anonymized
+
+Anonymize your data. Deposit your data with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms.
+
+You may now exit the tool.
+
+```{r}
+sd_close()
+```
+
+--- no_can_anonymize
+
+# Informed Consent to Share Data that Cannot Be Anonymized
+
+Deposit the parts of your data that can be anonymized in a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms. Be sure to publish other assets related to the data rather than the data itself (e.g., code, analytical scripts, interview guides, questionnaires, codebooks, research design materials, transcribing conventions, and data production protocols).
+
+You may now exit the tool.
+
+```{r}
+sd_close()
+```
