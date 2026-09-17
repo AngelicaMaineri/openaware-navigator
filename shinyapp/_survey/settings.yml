@@ -10,6 +10,7 @@ theme-settings:
   footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/surveydown-dev/template_conditional_showing)'
 
 survey-settings:
+  mode: database
   show-previous: no
   use-cookies: no
   auto-scroll: no

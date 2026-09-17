@@ -28,19 +28,34 @@ library(surveydown)
 
 # Transparency Guidelines for Restricted Data
 
-Welcome to the web form for determining necessary reporting standards for your restricted data project. Your responses in this form will not be saved.
+Welcome to the OpenAware Navigator! 
+
+The navigator can be used by researchers and data management professionals to decide what are best practices for making research open, reproducible, transparent and reusable as much as possible even when there are restrictions for data sharing.
+Your answers will not be saved.
+
+The OpenAware Navigator was created during the Open Science Retreat Netherlands 2026 by Mark van Assem, Lotte van Burgsteden, Rianne Fijten, Jack Fitzgerald, Bogdana Huma, Santosh Ilamparuthi, Angelica Maineri.
+
+Please note that the Navigator has been developed in the Netherlands, and most of the resources listed are mainly available to researchers affiliated to Dutch institutions. If you are interested in adapting this work to your own context, you are welcome to use this as a template.
+
+The OpenAware navigator is for you if you handle sensitive data. 
+
++ By sensitive data we mean “information that may be regulated by law due to possible risk for plants, a animals, individuals and/or communities and for public and private organisations.” (Adapted from: David et al., 2020, “Templates for FAIRness evaluation criteria – RDA-SHARC IG” ([link]( https://zenodo.org/record/3922069#.YCJU7ehKg2w)) - see full definition below)
++ This navigator focuses in more detail on cases of personal sensitive data, but its generic recommendations apply to all sensitive data as defined below
++ A useful resource is: DANS Decision Tree for reusing qualitative data: ([doi](https://doi.org/10.5281/zenodo.1839098))
++	Another useful resource is: DANS Guidance on Working with hard-to-share data ([link](https://zenodo.org/records/17588795))
+
 
 ::: {.callout-tip}
 The RDA Sensitive Data Interest Group provides the following working definition of `sensitive data': “Data is information, observations, measurements or some other form of documentation about a place, person, event, animal or phenomenon. It may be digital or non-digital. Sensitive data is Information that may be regulated by law due to possible risk for plants, animals, individuals and/or communities and for public and private organisations. Sensitive personal data as a specific subset of sensitive data include information related to racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership and data concerning the health or sex life of an identifiable (or potentially identifiable) individual. All sensitive data are data that could potentially cause harm through their disclosure. For local and government authorities, sensitive data is related to security (political, diplomatic, military data, biohazard concerns, etc.), environmental risks (nuclear or other sensitive installations, for example) or environmental preservation (habitats, protected fauna or flora, in particular). Sensitive data may also be subject to stipulations of customary or communal law of First Nations Peoples, and may be subject to the guidance of communities, traditional leaders, and CARE authority. The sensitive data of a private body concerns particular strategic elements or elements likely to jeopardise its competitiveness.”
 
-David et al., 2020. “Templates for FAIRness evaluation criteria – RDA-SHARC IG.” https://zenodo.org/record/3922069#.YCJU7ehKg2w.
+David et al., 2020. “Templates for FAIRness evaluation criteria – RDA-SHARC IG.” ([link]( https://zenodo.org/record/3922069#.YCJU7ehKg2w))
 :::
   
 ```{r}
 sd_question(
   type  = 'mc',
-  id    = 'sensitive_data_q',
-  label = "Does your project use sensitive data?",
+  id    = 'continue',
+  label = "Do you wish to continue?",
   option = c(
     'Yes'    = 'yes',
     'No' = 'no'
@@ -50,12 +65,15 @@ sd_question(
 
 --- no_sensitive_data
 
+<!--
 # No Sensitive Data
 
 Talk to a data steward. To find a data steward, please see contact information on your local Digital Competence Center or University Library. If your institution does not have a Digital Competence Center, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the Awesome RDM Support list for contacts (https://github.com/AngelicaMaineri/awesome-RDM-support/).
 
 You may now exit the tool.
+--> 
 
+# Thank you for your time!
 
 ```{r}
 sd_close()
@@ -65,8 +83,12 @@ sd_close()
 
 # Control Over Data
 
-::: {.callout-tip}
-If you are producing the data yourself, you have control of the data. If another legal entity produced the data, you probably do not have full control of the data. If you are combining data from different sources, please select “Yes” and answer the rest of this flowchart from the perspective of the data that you have control over; then later, for the part of your sources you do not have control over, follow the steps for “No”.
+::: {.callout-note}
++	If you are producing the data yourself, you have control of the data
++	If another legal entity produced the data, you probably do not have full control of the data
++ If you are combining data from different sources, please select “Yes” and answer the rest of this flowchart from the perspective of the data that you have control over
++ Then later, for the part of your sources you do not have control over, follow the steps for “No”
+
 
 :::
 
@@ -77,8 +99,7 @@ sd_question(
   label = "Do you have control over the data?",
   option = c(
     'Yes'    = 'yes',
-    'No' = 'no',
-    'Unsure'    = 'unsure'
+    'No' = 'no'
   )
 )
 ```

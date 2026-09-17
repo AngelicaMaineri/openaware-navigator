@@ -288,7 +288,7 @@ sd_db_connect <- function(
                     }
                 )
             } else {
-                # Not a GSSAPI error or not in auto mode, just fail normally
+                # Not a GSSAPI error or not in auto mode, instajust fail normally
                 cli::cli_alert_warning("Failed to connect to the database:")
                 cli::cli_text(conditionMessage(e))
                 cli::cli_text("")

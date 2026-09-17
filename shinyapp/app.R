@@ -49,10 +49,9 @@ server <- function(input, output, session) {
   sd_show_if(
     
     # 6. Conditional page showing
-    sd_value("sensitive_data_q") == 'yes' ~ 'yes_sensitive_data',
-    sd_value("sensitive_data_q") == 'no' ~ 'no_sensitive_data',
+    sd_value("continue") == 'yes' ~ 'yes_sensitive_data',
+    sd_value("continue") == 'no' ~ 'no_sensitive_data',
     sd_value("control_over_data_q") == 'yes' ~ 'yes_control_over_data',
-    sd_value("control_over_data_q") == 'unsure' ~ 'unsure_control_over_data',
     sd_value("control_over_data_q") == 'no' ~ 'no_control_over_data',
     sd_value("contacted_data_steward_q") == 'no' ~ 'no_contacted_data_steward',
     sd_value("informed_consent_q") == 'no' ~ 'no_informed_consent',

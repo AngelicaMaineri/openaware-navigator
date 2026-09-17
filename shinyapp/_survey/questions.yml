@@ -1,9 +1,10 @@
 # ! JUST READ - don't change the content of this file
 # Question structure extracted from survey.html
-sensitive_data_q:
+continue:
   index: 1
   type: mc
-  label: Does your project use sensitive data?
+  label: Do you wish to continue?
+  label_html: Do you wish to continue?
   options:
     'Yes': 'yes'
     'No': 'no'
@@ -11,14 +12,15 @@ control_over_data_q:
   index: 2
   type: mc
   label: Do you have control over the data?
+  label_html: Do you have control over the data?
   options:
     'Yes': 'yes'
     'No': 'no'
-    Unsure: unsure
 contacted_data_steward_q:
   index: 3
   type: mc
   label: Have you contacted your institution’s data steward about your project?
+  label_html: Have you contacted your institution’s data steward about your project?
   options:
     'Yes': 'yes'
     'No': 'no'
@@ -26,6 +28,7 @@ informed_consent_q:
   index: 4
   type: mc
   label: Does your project make use of informed consent?
+  label_html: Does your project make use of informed consent?
   options:
     'Yes': 'yes'
     'No': 'no'
@@ -33,6 +36,8 @@ informed_consent_data_sharing_q:
   index: 5
   type: mc
   label: Does your informed consent inform subjects that data may be shared or published?
+  label_html: Does your informed consent inform subjects that data may be shared or
+    published?
   options:
     'Yes': 'yes'
     'No': 'no'
@@ -40,6 +45,7 @@ non_anonymous_q:
   index: 6
   type: mc
   label: Does your informed consent allow for the sharing of non-anonymous data?
+  label_html: Does your informed consent allow for the sharing of non-anonymous data?
   options:
     Yes, openly: yes_openly
     Yes, with restrictions: yes_with_restrictions
@@ -49,6 +55,7 @@ anonymity_q:
   index: 7
   type: mc
   label: Is your data anonymized?
+  label_html: Is your data anonymized?
   options:
     'Yes': 'yes'
     'No': 'no'
@@ -56,6 +63,7 @@ can_anonymize_q:
   index: 8
   type: mc
   label: Can your data be anonymized?
+  label_html: Can your data be anonymized?
   options:
     'Yes': 'yes'
     'No': 'no'
