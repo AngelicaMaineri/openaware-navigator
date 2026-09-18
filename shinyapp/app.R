@@ -47,29 +47,24 @@ server <- function(input, output, session) {
   
   # Define any conditional showing logic here (show a question if a condition is true)
   sd_show_if(
-    
-    # 6. Conditional page showing
-    sd_value("continue") == 'yes' ~ 'node_control',
-    sd_value("continue") == 'no' ~ 'endpoint_exit',
-    sd_value("node_control_q") == 'yes' ~ 'node_steward',
-    sd_value("node_control_q") == 'no' ~ 'endpoint_info',
-    sd_value("node_steward_q") == 'yes' ~ 'node_consent',
-    sd_value("node_steward_q") == 'no' ~ 'action_contact',
-    sd_value("node_consent_q") == 'no' ~ 'action_mdonly',
-    sd_value("node_consent_q") == 'yes' ~ 'node_anon',
-    sd_value("node_anon_q") == 'yes' ~ 'action_deposit',
-    sd_value("node_anon_q") == 'no' ~ 'node_anonit',
-    sd_value("node_anonit_q") == 'yes' ~ 'action_deposit',
-    sd_value("node_anonit_q") == 'no' ~ 'node_anoncan',
-    sd_value("node_anoncan_q") == 'yes' ~ 'action_anondoit',
-    sd_value("node_anoncan_q") == 'no' ~ 'action_mdonly',
-    sd_value("action_anondoit_q") == 'yes' ~ 'action_deposit',
-    sd_value("action_anondoit_q") == 'no' ~ 'endpoint_exit',
-    sd_value("action_mdonly_q") == 'yes' ~ 'endpoint_materials',
-    sd_value("action_mdonly_q") == 'no' ~ 'endpoint_exit',
-    sd_value("action_deposit_q") == 'yes' ~ 'endpoint_materials',
-    sd_value("action_deposit_q") == 'no' ~ 'endpoint_exit'
-  )
+      sd_value("continue") == 'yes' ~ 'node_control',
+      sd_value("node_control_q") == 'yes' ~ 'node_steward',
+      sd_value("node_control_q") == 'no' ~ 'endpoint_info',
+      sd_value("node_steward_q") == 'yes' ~ 'node_consent',
+      sd_value("node_steward_q") == 'no' ~ 'action_contact',
+      sd_value("node_consent_q") == 'yes' ~ 'node_anon',
+      (sd_value("node_consent_q") == 'no' | sd_value("node_anoncan_q") == 'no') ~ 'action_mdonly',
+      (sd_value("node_anon_q") == 'yes' | sd_value("node_anonit_q") == 'yes') ~ 'action_deposit',
+      sd_value("node_anon_q") == 'no' ~ 'node_anonit',
+      sd_value("node_anonit_q") == 'no' ~ 'node_anoncan',
+      sd_value("node_anoncan_q") == 'yes' ~ 'action_anondoit',
+      sd_value("action_anondoit_q") == 'yes' ~ 'action_deposit',
+      (sd_value("action_mdonly_q") == 'yes' | sd_value("action_deposit_q") == 'yes') ~ 'endpoint_materials',
+      (sd_value("continue") == 'no' |
+         sd_value("action_anondoit_q") == 'no' |
+         sd_value("action_mdonly_q") == 'no' |
+         sd_value("action_deposit_q") == 'no') ~ 'endpoint_exit'
+    )
   
   # Run surveydown server and define database
   sd_server(db = db)
