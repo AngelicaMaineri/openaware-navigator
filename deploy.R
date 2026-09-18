@@ -1,9 +1,8 @@
-shiny::runApp(".")
+# Scripts to run the app and deploy online
 
-getwd()
 setwd("C:/Users/angel/Documents/GitHub/odissei/openaware-navigator")
 
-options(rsconnect.renv.snapshot = FALSE)
+shiny::runApp(".")
 
 rsconnect::deployApp(
   appDir  = "shinyapp",

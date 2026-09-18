@@ -5,6 +5,6 @@ account: angelicamaineri
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 17939899
-bundleId:
+bundleId: 12573604
 url: https://angelicamaineri.shinyapps.io/OpenAware_Navigator/
 version: 1
