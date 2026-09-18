@@ -4924,18 +4924,21 @@ font-weight: 800;
 <li>A useful resource is: DANS Decision Tree for reusing qualitative data: (<a href="https://doi.org/10.5281/zenodo.1839098">doi</a>)</li>
 <li>Another useful resource is: DANS Guidance on Working with hard-to-share data (<a href="https://zenodo.org/records/17588795">link</a>)</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+RDA definition of sensitive data
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The RDA Sensitive Data Interest Group provides the following working definition of `sensitive data’: “Data is information, observations, measurements or some other form of documentation about a place, person, event, animal or phenomenon. It may be digital or non-digital. Sensitive data is Information that may be regulated by law due to possible risk for plants, animals, individuals and/or communities and for public and private organisations. Sensitive personal data as a specific subset of sensitive data include information related to racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership and data concerning the health or sex life of an identifiable (or potentially identifiable) individual. All sensitive data are data that could potentially cause harm through their disclosure. For local and government authorities, sensitive data is related to security (political, diplomatic, military data, biohazard concerns, etc.), environmental risks (nuclear or other sensitive installations, for example) or environmental preservation (habitats, protected fauna or flora, in particular). Sensitive data may also be subject to stipulations of customary or communal law of First Nations Peoples, and may be subject to the guidance of communities, traditional leaders, and CARE authority. The sensitive data of a private body concerns particular strategic elements or elements likely to jeopardise its competitiveness.”</p>
 <p>David et al., 2020. “Templates for FAIRness evaluation criteria – RDA-SHARC IG.” (<a href="https://zenodo.org/record/3922069#.YCJU7ehKg2w">link</a>)</p>
+</div>
 </div>
 </div>
 <div class="cell">
@@ -4965,51 +4968,7 @@ Tip
 </div>
 </section>
 </div>
-<div id="no_sensitive_data" class="sd_page">
-<!--
-# No Sensitive Data
-
-Talk to a data steward. To find a data steward, please see contact information on your local Digital Competence Center or University Library. If your institution does not have a Digital Competence Center, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the Awesome RDM Support list for contacts (https://github.com/AngelicaMaineri/awesome-RDM-support/).
-
-You may now exit the tool.
--->
-<section id="thank-you-for-your-time" class="level1">
-<h1>Thank you for your time!</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="yes_sensitive_data" class="sd_page">
+<div id="node_control" class="sd_page">
 <section id="control-over-data" class="level1">
 <h1>Control Over Data</h1>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -5032,20 +4991,20 @@ Note
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="container-control_over_data_q" data-question-id="control_over_data_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;control_over_data_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;control_over_data_q_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div id="control_over_data_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="control_over_data_q-label">
-<label class="control-label" id="control_over_data_q-label" for="control_over_data_q"><p>Do you have control over the data?</p>
+<div id="container-node_control_q" data-question-id="node_control_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;node_control_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;node_control_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="node_control_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="node_control_q-label">
+<label class="control-label" id="node_control_q-label" for="node_control_q"><p>Do you have control over the data?</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
 <label>
-<input type="radio" name="control_over_data_q" value="yes">
+<input type="radio" name="node_control_q" value="yes">
 <span>Yes</span>
 </label>
 </div>
 <div class="radio">
 <label>
-<input type="radio" name="control_over_data_q" value="no">
+<input type="radio" name="node_control_q" value="no">
 <span>No</span>
 </label>
 </div>
@@ -5057,87 +5016,56 @@ Note
 </div>
 </section>
 </div>
-<div id="no_control_over_data" class="sd_page">
-<section id="no-control-over-data" class="level1">
-<h1>No Control Over Data</h1>
-<p>Contact the data controller to collect as much information as possible about the data (including the DOI of the metadata). Cite the metadata in your publication(s). Add a clear description of how to access the data in your publication. Be sure to publish other assets related to the data rather than the data itself (e.g., code, analytical scripts, interview guides, questionnaires, codebooks, research design materials, transcribing conventions, and data production protocols).</p>
-<p>You may now exit the tool.</p>
+<div id="node_steward" class="sd_page">
+<section id="contact-data-steward" class="level1">
+<h1>Contact data steward</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>We highly recommend contacting the data steward at the Digital Competence Center (DCC) of your institution</li>
+<li>They can provide a lot of help relevant to your institution or case including knowledge of context, guidelines, procedures, information on the local repository of your institution</li>
+</ul>
+</div>
+</div>
 <div class="cell">
 <div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
+<div id="container-node_steward_q" data-question-id="node_steward_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;node_steward_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;node_steward_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="node_steward_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="node_steward_q-label">
+<label class="control-label" id="node_steward_q-label" for="node_steward_q"><p>Have you been in touch with a data steward about this project?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="node_steward_q" value="yes">
+<span>Yes</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="node_steward_q" value="no">
+<span>No</span>
+</label>
 </div>
 </div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
 </div>
 </div>
 </section>
 </div>
-<div id="unsure_control_over_data" class="sd_page">
-<section id="uncertain-about-control-over-data" class="level1">
-<h1>Uncertain About Control Over Data</h1>
-<p>Talk to a data steward. To find a data steward, please see contact information on your local Digital Competence Center or University Library. If your institution does not have a Digital Competence Center, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the Awesome RDM Support list for contacts (https://github.com/AngelicaMaineri/awesome-RDM-support/).</p>
-<p>You may now exit the tool.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="yes_control_over_data" class="sd_page">
-<section id="data-steward-contact" class="level1">
-<h1>Data Steward Contact</h1>
+<div id="action_contact" class="sd_page">
+<section id="action-contact-a-data-steward" class="level1">
+<h1><em>Action</em>: Contact a data steward</h1>
+<p>It is recommended that you contact a data steward before you continue</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -5148,75 +5076,52 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Subjects to discuss with your data steward include storage options, security thresholds, institutional standards, and necessary certifications.</p>
+<p>How to contact your DCC/data steward</p>
+<ul>
+<li>Please see contact information on your local Digital Competence Center (DCC) or University Library.</li>
+<li>If your institution does not have a DCC, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the <a href="https://github.com/AngelicaMaineri/awesome-RDM-support/blob/main/README.md">Awesome RDM Support list</a> for contacts.</li>
+</ul>
 </div>
 </div>
-<div class="cell">
-<div class="cell-output-display">
-<div id="container-contacted_data_steward_q" data-question-id="contacted_data_steward_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;contacted_data_steward_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;contacted_data_steward_q_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div id="contacted_data_steward_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="contacted_data_steward_q-label">
-<label class="control-label" id="contacted_data_steward_q-label" for="contacted_data_steward_q"><p>Have you contacted your institution’s data steward about your project?</p>
-</label>
-<div class="shiny-options-group">
-<div class="radio">
-<label>
-<input type="radio" name="contacted_data_steward_q" value="yes">
-<span>Yes</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="contacted_data_steward_q" value="no">
-<span>No</span>
-</label>
-</div>
-</div>
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div id="no_contacted_data_steward" class="sd_page">
-<section id="data-steward-not-contacted" class="level1">
-<h1>Data Steward Not Contacted</h1>
-<p>Talk to a data steward. To find a data steward, please see contact information on your local Digital Competence Center or University Library. If your institution does not have a Digital Competence Center, possibly assistance can be found at relevant infrastructures in your domain, or international organisations. Check out the Awesome RDM Support list for contacts (https://github.com/AngelicaMaineri/awesome-RDM-support/).</p>
 <p>You may now continue using the tool.</p>
 </section>
 </div>
-<div id="informed_consent" class="sd_page">
+<div id="node_consent" class="sd_page">
 <section id="informed-consent" class="level1">
 <h1>Informed Consent</h1>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When we say <code>informed consent</code>, we mean…</p>
+<ul>
+<li>If your data are about people, then you will most likely need or already have obtained their consent on the possible uses of the data</li>
+<li>If you have not yet gathered the data, it is very useful to define the consent in such a way that it will allow the widest possible reuse of the data. For instance, check out this ethics informed consent form template for asking for (opt-in) consent to share &amp; reuse audio-visual (potentially sensitive) data: <a href="https://www.opennaturallyoccurringdata.com/informed-consent-form">https://www.opennaturallyoccurringdata.com/informed-consent-form</a></li>
+<li>According to the <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/6.-Archive-Publish/Towards-archiving-publication">CESSDA Data Management Expert Guide</a>, “Publishing your data is the act of publicly disclosing the research data you have collected, making them findable, accessible and reusable”. Sometimes you are allowed to share your data with other researchers, e.g. through Trusted Research Environments like <a href="https://www.surf.nl/en/themes/research-infrastructure/sane-secure-environment-for-analysing-sensitive-data">SANE</a> and <a href="https://andrea-cloud.com/">anDREA</a>, but not to publicly disclose the research data (e.g. by depositing it in a Trusted Digital Repository).</li>
+</ul>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="container-informed_consent_q" data-question-id="informed_consent_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;informed_consent_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;informed_consent_q_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div id="informed_consent_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="informed_consent_q-label">
-<label class="control-label" id="informed_consent_q-label" for="informed_consent_q"><p>Does your project make use of informed consent?</p>
+<div id="container-node_consent_q" data-question-id="node_consent_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;node_consent_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;node_consent_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="node_consent_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="node_consent_q-label">
+<label class="control-label" id="node_consent_q-label" for="node_consent_q"><p>Does or will your data have informed consent, and will that allow data sharing and/or publishing?</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
 <label>
-<input type="radio" name="informed_consent_q" value="yes">
+<input type="radio" name="node_consent_q" value="yes">
 <span>Yes</span>
 </label>
 </div>
 <div class="radio">
 <label>
-<input type="radio" name="informed_consent_q" value="no">
+<input type="radio" name="node_consent_q" value="no">
 <span>No</span>
 </label>
 </div>
@@ -5228,158 +5133,38 @@ Tip
 </div>
 </section>
 </div>
-<div id="no_informed_consent" class="sd_page">
-<section id="no-informed-consent" class="level1">
-<h1>No Informed Consent</h1>
-<p>Here are options and best practices when the project does not involve informed consent…. 1. x 2. y 3. z</p>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="yes_informed_consent" class="sd_page">
-<section id="informed-consent-and-data-sharing" class="level1">
-<h1>Informed Consent and Data Sharing</h1>
-<div class="cell">
-<div class="cell-output-display">
-<div id="container-informed_consent_data_sharing_q" data-question-id="informed_consent_data_sharing_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;informed_consent_data_sharing_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;informed_consent_data_sharing_q_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div id="informed_consent_data_sharing_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="informed_consent_data_sharing_q-label">
-<label class="control-label" id="informed_consent_data_sharing_q-label" for="informed_consent_data_sharing_q"><p>Does your informed consent inform subjects that data may be shared or published?</p>
-</label>
-<div class="shiny-options-group">
-<div class="radio">
-<label>
-<input type="radio" name="informed_consent_data_sharing_q" value="yes">
-<span>Yes</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="informed_consent_data_sharing_q" value="no">
-<span>No</span>
-</label>
-</div>
-</div>
-</div>
-<span class="hidden-asterisk">*</span>
-</div>
-</div>
-</div>
-</section>
-</div>
-<div id="no_informed_consent_data_sharing" class="sd_page">
-<section id="no-informed-consent-for-data-sharing" class="level1">
-<h1>No Informed Consent for Data Sharing</h1>
-<p>Be sure to publish other assets related to the data rather than the data itself (e.g., code, analytical scripts, interview guides, questionnaires, codebooks, research design materials, transcribing conventions, and data production protocols).</p>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="yes_informed_consent_data_sharing" class="sd_page">
-<section id="non-anonymous-data-sharing" class="level1">
-<h1>Non-Anonymous Data Sharing</h1>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div id="node_anon" class="sd_page">
+<section id="anonymisation" class="level1">
+<h1>Anonymisation</h1>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Under GDPR, non-anonymous data includes…</p>
-<p>By <code>restrictions</code>, we mean…</p>
-<p>Examples where informed consent can allow for partial non-anonymous data sharing include…</p>
+<p>Some data need to be anonymised before it can be shared, other data can be shared without removing sensitive information</p>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="container-non_anonymous_q" data-question-id="non_anonymous_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;non_anonymous_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;non_anonymous_q_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div id="non_anonymous_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="non_anonymous_q-label">
-<label class="control-label" id="non_anonymous_q-label" for="non_anonymous_q"><p>Does your informed consent allow for the sharing of non-anonymous data?</p>
+<div id="container-node_anon_q" data-question-id="node_anon_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;node_anon_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;node_anon_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="node_anon_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="node_anon_q-label">
+<label class="control-label" id="node_anon_q-label" for="node_anon_q"><p>Does or will your informed consent allow to publish non-anonymous data?</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
 <label>
-<input type="radio" name="non_anonymous_q" value="yes_openly">
-<span>Yes, openly</span>
+<input type="radio" name="node_anon_q" value="yes">
+<span>Yes</span>
 </label>
 </div>
 <div class="radio">
 <label>
-<input type="radio" name="non_anonymous_q" value="yes_with_restrictions">
-<span>Yes, with restrictions</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="non_anonymous_q" value="partially">
-<span>Partially</span>
-</label>
-</div>
-<div class="radio">
-<label>
-<input type="radio" name="non_anonymous_q" value="no">
+<input type="radio" name="node_anon_q" value="no">
 <span>No</span>
 </label>
 </div>
@@ -5391,155 +5176,25 @@ Tip
 </div>
 </section>
 </div>
-<div id="yes_openly_non_anonymous" class="sd_page">
-<section id="informed-consent-for-openly-sharing-non-anonymous-data" class="level1">
-<h1>Informed Consent for Openly Sharing Non-Anonymous Data</h1>
-<p>Deposit your data with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations, 4TU.ResearchData, or your institution’s DataverseNL. Specify a license for the data (the repository usually defines which licenses are possible).</p>
-<p>You may now exit the tool.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="yes_with_restrictions_non_anonymous" class="sd_page">
-<section id="informed-consent-for-sharing-non-anonymous-data-with-restrictions" class="level1">
-<h1>Informed Consent for Sharing Non-Anonymous Data with Restrictions</h1>
-<p>Deposit your data with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms.</p>
-<p>You may now exit the tool.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="partially_non_anonymous" class="sd_page">
-<section id="informed-consent-for-partially-sharing-non-anonymous-data" class="level1">
-<h1>Informed Consent for Partially Sharing Non-Anonymous Data</h1>
-<p>Deposit the parts of your data you can share with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms.</p>
-<p>You may now exit the tool.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="no_non_anonymous" class="sd_page">
+<div id="node_anonit" class="sd_page">
 <section id="anonymity" class="level1">
 <h1>Anonymity</h1>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>By <code>anonymized</code>, we mean…</p>
-</div>
-</div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="container-anonymity_q" data-question-id="anonymity_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;anonymity_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;anonymity_q_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div id="anonymity_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="anonymity_q-label">
-<label class="control-label" id="anonymity_q-label" for="anonymity_q"><p>Is your data anonymized?</p>
+<div id="container-node_anonit_q" data-question-id="node_anonit_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;node_anonit_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;node_anonit_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="node_anonit_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="node_anonit_q-label">
+<label class="control-label" id="node_anonit_q-label" for="node_anonit_q"><p>Are or will the data be collected in anonymised form?</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
 <label>
-<input type="radio" name="anonymity_q" value="yes">
+<input type="radio" name="node_anonit_q" value="yes">
 <span>Yes</span>
 </label>
 </div>
 <div class="radio">
 <label>
-<input type="radio" name="anonymity_q" value="no">
+<input type="radio" name="node_anonit_q" value="no">
 <span>No</span>
 </label>
 </div>
@@ -5551,76 +5206,41 @@ Tip
 </div>
 </section>
 </div>
-<div id="yes_anonymity" class="sd_page">
-<section id="informed-consent-for-partially-sharing-non-anonymous-data-1" class="level1">
-<h1>Informed Consent for Partially Sharing Non-Anonymous Data</h1>
-<p>Given that you have anonymized data…</p>
-<div class="cell">
-<div class="cell-output-display">
-<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
-<div style="width: 100%; text-align: center;">
-<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
-</div>
-</div>
-<script>
-      Shiny.addCustomMessageHandler('closeWindow', function(message) {
-        window.close();
-        if (!window.closed) {
-          alert('Please close this tab manually to exit the survey.');
-        }
-      });
-
-      Shiny.addCustomMessageHandler('clearCookies', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-      });
-
-      Shiny.addCustomMessageHandler('forceRestart', function(message) {
-        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
-          surveydownCookies.forceRestart();
-        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
-          surveydownCookies.clear();
-        }
-        window.location.reload();
-      });
-    </script>
-</div>
-</div>
-</section>
-</div>
-<div id="no_anonymity" class="sd_page">
+<div id="node_anoncan" class="sd_page">
 <section id="capacity-to-anonymize" class="level1">
 <h1>Capacity to Anonymize</h1>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Most data can be anonymized, that is: direct identifiers (e.g., names, addresses) and indirect identifiers (e.g., combination of information like age, occupation and postcode) are removed from the data. See more info about anonymization in the CESSDA Data Management Expert Guide (https://dmeg.cessda.eu/Data-Management-Expert-Guide/5.-Protect/Anonymisation). For some data types it does not make sense to anonymize, as the resulting data will become useless. This for example holds for longer video interviews of patient journeys. Those types of data cannot be anonymized.</p>
+<ul>
+<li>Most data can be anonymised, that is: direct identifiers (e.g., names, addresses) and indirect identifiers (e.g., combination of information like age, occupation and postcode) are removed from the data. See more info about anonymisation in the <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/5.-Protect/Anonymisation">CESSDA Data Management Expert Guide</a>.</li>
+<li>For some data types it does not make sense to anonymise as the resulting data will become useless. This for example holds for longer video interviews of patient journeys. Those types of data cannot be anonymised</li>
+</ul>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="container-can_anonymize_q" data-question-id="can_anonymize_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;can_anonymize_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;can_anonymize_q_interacted&#39;, true, {priority: &#39;event&#39;});">
-<div id="can_anonymize_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="can_anonymize_q-label">
-<label class="control-label" id="can_anonymize_q-label" for="can_anonymize_q"><p>Can your data be anonymized?</p>
+<div id="container-node_anoncan_q" data-question-id="node_anoncan_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;node_anoncan_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;node_anoncan_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="node_anoncan_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="node_anoncan_q-label">
+<label class="control-label" id="node_anoncan_q-label" for="node_anoncan_q"><p>Can the data be anonymised?</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
 <label>
-<input type="radio" name="can_anonymize_q" value="yes">
+<input type="radio" name="node_anoncan_q" value="yes">
 <span>Yes</span>
 </label>
 </div>
 <div class="radio">
 <label>
-<input type="radio" name="can_anonymize_q" value="no">
+<input type="radio" name="node_anoncan_q" value="no">
 <span>No</span>
 </label>
 </div>
@@ -5632,10 +5252,168 @@ Tip
 </div>
 </section>
 </div>
-<div id="yes_can_anonymize" class="sd_page">
-<section id="informed-consent-to-share-data-that-can-be-anonymized" class="level1">
-<h1>Informed Consent to Share Data that Can Be Anonymized</h1>
-<p>Anonymize your data. Deposit your data with a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms.</p>
+<div id="action_anondoit" class="sd_page">
+<section id="action-anonymise-the-data" class="level1">
+<h1><em>Action</em>: Anonymise the data</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>See more info about anonymisation in the <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/5.-Protect/Anonymisation">CESSDA Data Management Expert Guide</a>.</li>
+<li>Check the results: for instance, <a href="https://ukdataservice.ac.uk/about/research-and-development/past-projects/qamydata/">QAMyData</a> is an open source tool developed by UKDS to check numeric data for problems such as direct identifiers (but also other quality indicators such as missingness and outliers)</li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container-action_anondoit_q" data-question-id="action_anondoit_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;action_anondoit_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;action_anondoit_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="action_anondoit_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="action_anondoit_q-label">
+<label class="control-label" id="action_anondoit_q-label" for="action_anondoit_q"><p>Do you wish to read about depositing data?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="action_anondoit_q" value="yes">
+<span>Yes</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="action_anondoit_q" value="no">
+<span>No</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="action_mdonly" class="sd_page">
+<section id="action-deposit-what-you-can-andor-create-metadata-only-record" class="level1">
+<h1><em>Action</em>: Deposit what you can and/or create metadata-only record</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Possibly there are parts of your data that can be shared, consider sharing those (go back in this flowchart to get advice on that part of your data)</li>
+<li>If the amount of work to share only part of the data is very high, while the usefulness to others will be very limited, it is understandable to skip this</li>
+<li>Note that while partially sharing data increases research transparency, it has little or no effect on research reproducibility</li>
+<li>If you are processing the data on other bases than informed consent (e.g., legitimate interest) talk to your data steward or privacy officer to find out whether and how you can share/publish the data</li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container-action_mdonly_q" data-question-id="action_mdonly_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;action_mdonly_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;action_mdonly_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="action_mdonly_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="action_mdonly_q-label">
+<label class="control-label" id="action_mdonly_q-label" for="action_mdonly_q"><p>Do you wish to read more about this?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="action_mdonly_q" value="yes">
+<span>Yes</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="action_mdonly_q" value="no">
+<span>No</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="action_deposit" class="sd_page">
+<section id="action-deposit-your-data-with-a-trusted-digital-repository-tdr" class="level1">
+<h1><em>Action</em>: Deposit your data with a Trusted Digital Repository (TDR)</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>for example, in the Netherlands: <a href="https://dans.knaw.nl/en/data-stations/">DANS Data Stations</a>, <a href="https://data.4tu.nl/info/about-your-data/getting-started">4TU.ResearchData</a>, your institution’s <a href="https://dataverse.nl/dataverse/root">DataverseNL</a> or other repository.</li>
+<li>Specify a license for the data (the repository usually defines which licenses are possible)</li>
+<li>Note that you can apply some restrictions to your data if needed.</li>
+</ul>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container-action_deposit_q" data-question-id="action_deposit_q" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;action_deposit_q_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;action_deposit_q_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div id="action_deposit_q" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="action_deposit_q-label">
+<label class="control-label" id="action_deposit_q-label" for="action_deposit_q"><p>Do you wish to read about sharing other research materials?</p>
+</label>
+<div class="shiny-options-group">
+<div class="radio">
+<label>
+<input type="radio" name="action_deposit_q" value="yes">
+<span>Yes</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="action_deposit_q" value="no">
+<span>No</span>
+</label>
+</div>
+</div>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="endpoint_info" class="sd_page">
+<section id="recommendation-provide-as-much-info-as-you-can" class="level1">
+<h1><em>Recommendation</em>: Provide as much info as you can</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Contact the data controller to collect as much information as possible about the data (including the DOI of the metadata)</li>
+<li>Cite the metadata in your publications</li>
+<li>Add a clear description of how to access the data in your publications</li>
+<li>Publish other research outputs (e.g., materials such code, field notes etc.)</li>
+</ul>
+</div>
+</div>
 <p>You may now exit the tool.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -5671,11 +5449,97 @@ Tip
 </div>
 </section>
 </div>
-<div id="no_can_anonymize" class="sd_page">
-<section id="informed-consent-to-share-data-that-cannot-be-anonymized" class="level1">
-<h1>Informed Consent to Share Data that Cannot Be Anonymized</h1>
-<p>Deposit the parts of your data that can be anonymized in a Trusted Digital Repository (TDR). For example, in the Netherlands: DANS Data Stations or 4TU.ResearchData. Specify a license for the data (the repository usually defines which licenses are possible). DANS and 4TU.ResearchData additionally offer the ability to restrict access to data; apply necessary access restrictions on these platforms. Be sure to publish other assets related to the data rather than the data itself (e.g., code, analytical scripts, interview guides, questionnaires, codebooks, research design materials, transcribing conventions, and data production protocols).</p>
-<p>You may now exit the tool.</p>
+<div id="endpoint_materials" class="sd_page">
+<section id="action-share-and-cite-your-research-materials" class="level1">
+<h1><em>Action</em>: Share and cite your research materials!</h1>
+<p>Share/publish related materials and make sure to cite data and materials in your publication. Read more below</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tips on sharing materials
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>By materials we mean anything that can help others understanding how you reached your results:</li>
+<li>code,</li>
+<li>analytical scripts,</li>
+<li>interview guides,</li>
+<li>questionnaires,</li>
+<li>codebooks,</li>
+<li>research design materials, etc</li>
+<li>Context: background of interviewer/interviewee, positionality statement, ethnographic notes (when not already in the data, take care of possible sensitiveness/identifying data)</li>
+<li>Transcribing conventions (reproducibility)</li>
+<li>Protocols to produce the data (e.g. a lab’s Standard Operating Procedures)</li>
+<li>Prepare analytical scripts or code for sharing: make sure the code does not have any sensitive elements, packages and versions are explicitly mentioned, etc. See also <a href="https://odissei-data.nl/2024/11/12/fair-blog-practical-tips-on-sharing-code/https://odissei-data.nl/2024/11/12/fair-blog-practical-tips-on-sharing-code/">Practical tips on sharing code</a>, and <a href="https://odissei-data.nl/2025/10/03/how-to-make-your-code-reproducible/">tips on making code reproducible</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tips on data citations
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>The publication should cite the data, or if not possible at least the metadata</li>
+<li>If you don’t have control over the data, the publication should report on how the data were accessed and used (for the goal of reproducibility)</li>
+<li>The publication should refer to a protocol for getting access to the data, so it should be very clear who can have access, under what conditions and how to request the data.</li>
+<li>The publication should cite/refer to any other research materials that are available elsewhere (e.g., code, transcribing conventions)</li>
+</ul>
+</div>
+</div>
+</div>
+<p>You may now exit the tool</p>
+<div class="cell">
+<div class="cell-output-display">
+<div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">
+<div style="width: 100%; text-align: center;">
+<button class="btn btn-default action-button sd-enter-button sd-nav-button" id="close-survey-button" onclick="Shiny.setInputValue(&#39;show_exit_modal&#39;, true, {priority: &#39;event&#39;}); Shiny.setInputValue(&#39;clear_cookies_on_exit&#39;, false, {priority: &#39;event&#39;});" style="display: inline-block;" type="button"><span class="action-label">Exit Survey</span></button>
+</div>
+</div>
+<script>
+      Shiny.addCustomMessageHandler('closeWindow', function(message) {
+        window.close();
+        if (!window.closed) {
+          alert('Please close this tab manually to exit the survey.');
+        }
+      });
+
+      Shiny.addCustomMessageHandler('clearCookies', function(message) {
+        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
+          surveydownCookies.clear();
+        }
+      });
+
+      Shiny.addCustomMessageHandler('forceRestart', function(message) {
+        if (typeof surveydownCookies !== 'undefined' && surveydownCookies.forceRestart) {
+          surveydownCookies.forceRestart();
+        } else if (typeof surveydownCookies !== 'undefined' && surveydownCookies.clear) {
+          surveydownCookies.clear();
+        }
+        window.location.reload();
+      });
+    </script>
+</div>
+</div>
+</section>
+</div>
+<div id="endpoint_exit" class="sd_page">
+<section id="thank-you-for-your-time" class="level1">
+<h1>Thank you for your time!</h1>
 <div class="cell">
 <div class="cell-output-display">
 <div style="margin-top: 0.5rem; margin-bottom: 0.5rem; position: relative; min-height: 40px;" class="sd-nav-container">

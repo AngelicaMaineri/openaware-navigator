@@ -8,7 +8,7 @@ continue:
   options:
     'Yes': 'yes'
     'No': 'no'
-control_over_data_q:
+node_control_q:
   index: 2
   type: mc
   label: Do you have control over the data?
@@ -16,54 +16,69 @@ control_over_data_q:
   options:
     'Yes': 'yes'
     'No': 'no'
-contacted_data_steward_q:
+node_steward_q:
   index: 3
   type: mc
-  label: Have you contacted your institution’s data steward about your project?
-  label_html: Have you contacted your institution’s data steward about your project?
+  label: Have you been in touch with a data steward about this project?
+  label_html: Have you been in touch with a data steward about this project?
   options:
     'Yes': 'yes'
     'No': 'no'
-informed_consent_q:
+node_consent_q:
   index: 4
   type: mc
-  label: Does your project make use of informed consent?
-  label_html: Does your project make use of informed consent?
+  label: Does or will your data have informed consent, and will that allow data sharing
+    and/or publishing?
+  label_html: Does or will your data have informed consent, and will that allow data
+    sharing and/or publishing?
   options:
     'Yes': 'yes'
     'No': 'no'
-informed_consent_data_sharing_q:
+node_anon_q:
   index: 5
   type: mc
-  label: Does your informed consent inform subjects that data may be shared or published?
-  label_html: Does your informed consent inform subjects that data may be shared or
-    published?
+  label: Does or will your informed consent allow to publish non-anonymous data?
+  label_html: Does or will your informed consent allow to publish non-anonymous data?
   options:
     'Yes': 'yes'
     'No': 'no'
-non_anonymous_q:
+node_anonit_q:
   index: 6
   type: mc
-  label: Does your informed consent allow for the sharing of non-anonymous data?
-  label_html: Does your informed consent allow for the sharing of non-anonymous data?
-  options:
-    Yes, openly: yes_openly
-    Yes, with restrictions: yes_with_restrictions
-    Partially: partially
-    'No': 'no'
-anonymity_q:
-  index: 7
-  type: mc
-  label: Is your data anonymized?
-  label_html: Is your data anonymized?
+  label: Are or will the data be collected in anonymised form?
+  label_html: Are or will the data be collected in anonymised form?
   options:
     'Yes': 'yes'
     'No': 'no'
-can_anonymize_q:
+node_anoncan_q:
+  index: 7
+  type: mc
+  label: Can the data be anonymised?
+  label_html: Can the data be anonymised?
+  options:
+    'Yes': 'yes'
+    'No': 'no'
+action_anondoit_q:
   index: 8
   type: mc
-  label: Can your data be anonymized?
-  label_html: Can your data be anonymized?
+  label: Do you wish to read about depositing data?
+  label_html: Do you wish to read about depositing data?
+  options:
+    'Yes': 'yes'
+    'No': 'no'
+action_mdonly_q:
+  index: 9
+  type: mc
+  label: Do you wish to read more about this?
+  label_html: Do you wish to read more about this?
+  options:
+    'Yes': 'yes'
+    'No': 'no'
+action_deposit_q:
+  index: 10
+  type: mc
+  label: Do you wish to read about sharing other research materials?
+  label_html: Do you wish to read about sharing other research materials?
   options:
     'Yes': 'yes'
     'No': 'no'
